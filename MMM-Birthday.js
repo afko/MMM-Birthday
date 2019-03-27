@@ -52,24 +52,16 @@ Module.register('MMM-Birthday', {
         var todayDate = new Date();
         if (this.dataFile) {
             div.innerHTML += "오늘의 생일! <br>";
-            for (var i = 0; i <= Object.keys(this.dataFile).length-1; i++){
-                var tempDate = new Date(this.dataFile[i].birth);
-
-                 
-
-                div.innerHTML += tempDate.getMonth();
-                div.innerHTML += todayDate.getMonth();
-                div.innerHTML += tempDate.getDate();
-                div.innerHTML += todayDate.getDate();
-                div.innerHTML += this.dataFile[i].name +"<br>"
-                // if (tempDate.getMonth() == todayDate.getMonth() && tempDate.getDate() == todayDate.getDate() ) {
-                //     div.innerHTML += this.dataFile[i].name + "<br>";
-                // }
+            for (var i = 1; i <= Object.keys(this.dataFile).length; i++) {
+                var tempDate = new Date(this.dataFile[0].birth);
+                if (tempDate.getMonth() == todayDate.getMonth() && tempDate.getDate() == todayDate.getDate()) {
+                    div.innerHTML += this.dataFile[i].name + "<br>";
+                }
             }
-            div.innerHTML += "축하드립니다!"; 
+            div.innerHTML += "축하드립니다!";
 
-            wrapper.appendChild(div)
-            
+            wrapper.appendChild(div);
+
         } else {
             wrapper.innerHTML = "No data";
         }
