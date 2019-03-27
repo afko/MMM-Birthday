@@ -56,7 +56,7 @@ Module.register('MMM-Birthday', {
                 if (new Date(this.dataFile[i].birth).getMonth == todayDate.getMonth && new Date(this.dataFile[i].birth).getDay == todayDate.getDay ) {
                     div.innerHTML += "오늘의 생일! <br>"; 
                     div.innerHTML += this.dataFile[i].name + "<br>";
-                    div.innerHTML += "축하드립니다!!"; 
+                    div.innerHTML += "축하드립니다!"; 
                 }
             }
 
