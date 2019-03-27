@@ -1,0 +1,38 @@
+{
+	"1": {
+		"name": "Sangwon Jung(Jake)",
+        "birth": "03.02",
+        "department": "EDI"
+	},
+	"2": {
+		"name": "Boram Choi",
+        "birth": "03.07",
+        "department": "MIS"
+	},
+	"3": {
+		"name": "Hyejin Park(Hailey)",
+        "birth": "03.25",
+        "department": "SAP"
+	},
+	"4": {
+		"name": "Woonam Choi(Selina)",
+        "birth": "03.27",
+        "department": "CM"
+	},
+	"5": {
+		"name": "Juhyeong Lee",
+        "birth": "03.27",
+        "department": "TA"
+	},
+	"6": {
+		"name": "Sungje Kim(Justin)",
+        "birth": "10.16",
+        "department": "SA"
+	},
+	"7": {
+		"name": "Hyunsang Cho(Roy)",
+        "birth": "11.06",
+        "department": "SA"
+	}
+	
+}
