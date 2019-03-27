@@ -52,7 +52,7 @@ Module.register('MMM-Birthday', {
         var todayDate = new Date();
         if (this.dataFile) {
             div.innerHTML += "오늘의 생일! <br>";
-            for (var i = 0; i <= Object.keys(this.dataFile).length; i++){
+            for (var i = 0; i <= Object.keys(this.dataFile).length-1; i++){
                 var tempDate = new Date(this.dataFile[i].birth);
 
                  
