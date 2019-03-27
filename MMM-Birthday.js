@@ -40,7 +40,7 @@ Module.register('MMM-Birthday', {
 
         var wrapper = document.createElement("div");
         wrapper.id = "BIRTH";
-        wrapperinnerHTML = "";
+        wrapper.innerHTML = "";
         // var h1 = document.createElement("h1");
         // h1Text = document.createTextNode(" 오늘의 생일 !! ");
         // h1.appendChild(h1Text);
@@ -53,13 +53,15 @@ Module.register('MMM-Birthday', {
         if (this.dataFile) {
             
             for (var i = 0; i <= Object.keys(this.dataFile).length; i++){
-                if (new Date(this.dataFile[i].birth).getMonth == todayDate.getMonth && new Date(this.dataFile[i].birth).getDay == todayDate.getDay ) {
-                    div.innerHTML += "오늘의 생일! <br>"; 
+                var tempDate = new Date(this.dataFile[i].birth);
+
+                div.innerHTML += "오늘의 생일! <br>"; 
+                if (tempDate.getMonth() == todayDate.getMonth() && tempDate.getDate() == todayDate.getDate() ) {
                     div.innerHTML += this.dataFile[i].name + "<br>";
-                    div.innerHTML += "축하드립니다!"; 
                 }
             }
-
+            div.innerHTML += "축하드립니다!"; 
+            
             wrapper.appendChild(div)
             
         } else {
